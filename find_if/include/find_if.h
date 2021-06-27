@@ -10,14 +10,22 @@ using std::sort;
 
 namespace graal {
 
-/*! 
- * TODO: documentação no estilo doxygen
+/**
+ * @tparam InputIt tipo de iterator
+ * @tparam UnaryPredicate tipo da função predicado
+ * @param first iterator que aponta para o inicio do range
+ * @param last iterator que aponta para o final do range
+ * @param p função predicado
+ * @return InputIt iterator que aponta para o primeiro elemento do range que satisfaz p
  */
 template<class InputIt, class UnaryPredicate>
 InputIt find_if(InputIt first, InputIt last, UnaryPredicate p)
 {
-    // TODO
-    return first;
+  for(;first<last;first++) {
+    if(p(*first)) 
+      return first;
+  }
+  return last;
 }
 
 }
