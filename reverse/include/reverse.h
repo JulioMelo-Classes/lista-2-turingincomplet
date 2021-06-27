@@ -10,14 +10,21 @@ using std::sort;
 
 namespace graal {
 
-/*! 
- * TODO: documentação no estilo doxygen
- */
-template<class BidirIt>
-void reverse(BidirIt first, BidirIt last)
-{
-    // TODO
-}
-
+    
+    /**
+     * 
+     * 
+     * @tparam BidirIt tipo de iterator
+     * @param first iterator que aponta para primeira posição
+     * @param last iterator que aponta para ultima posição
+     */
+    template<class BidirIt>
+    void reverse(BidirIt first, BidirIt last)
+    {
+        last--;
+        for (; first<last; first++,last--) {
+            std::swap(*first,*last);
+        }
+    }
 }
 #endif
