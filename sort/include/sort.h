@@ -10,13 +10,24 @@ using std::sort;
 
 namespace graal {
 
-/*! 
- * TODO: documentação no estilo doxygen
+/**
+ * @tparam ForwardIt tipo de iterator
+ * @tparam Comparison tipo da função cmp
+ * @param first iterator que aponta para o inicio do range
+ * @param last iterator que aponta para o final do range
+ * @param cmp função que compara se um valor é menor que o outro
  */
 template<class ForwardIt, class Comparison>
 void sort(ForwardIt first, ForwardIt last, Comparison cmp)
 {
-    // TODO
+  auto aux=first;
+  for(;first<last-1; first++){
+    for(aux=first+1; aux<last; aux++){
+      if(cmp(*aux,*first)){
+       std::swap(*aux,*first);
+      }
+    }
+  }
 }
 
 }
