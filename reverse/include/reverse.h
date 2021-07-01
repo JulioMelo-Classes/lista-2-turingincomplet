@@ -18,6 +18,9 @@ namespace graal {
      * @param first iterator que aponta para primeira posição
      * @param last iterator que aponta para ultima posição
      */
+     /*
+     ok
+     */
     template<class BidirIt>
     void reverse(BidirIt first, BidirIt last)
     {

@@ -20,6 +20,9 @@ namespace graal {
  * @param eq função que testa igualdade
  * @return InputIt iterator para o primeiro elemento que satisfaz a função eq()
  */
+ /*
+ ok
+ */
 template<class InputIt, class T, class Equal>
 InputIt find(InputIt first, InputIt last, const T& value, Equal eq)
 {

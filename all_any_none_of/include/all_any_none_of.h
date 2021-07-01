@@ -1,7 +1,5 @@
 #ifndef GRAAL_H
 #define GRAAL_H
-#ifndef GRAAL_H
-#define GRAAL_H
 
 #include <utility>
 using std::pair;
@@ -21,6 +19,9 @@ namespace graal {
  * @return true se todos os elementos satisfazerem o predicado
  * @return false se tiver algum elemento que não satifaz o predicado
  */
+ /*
+ blz
+ */
 template<class InputIt, class UnaryPredicate>
 bool all_of(InputIt first, InputIt last, UnaryPredicate p)
 {
@@ -30,7 +31,7 @@ bool all_of(InputIt first, InputIt last, UnaryPredicate p)
     if(!p(*first))
     return false;
   }
-    return true;
+    return true; //!!
 }
 
 /**
@@ -45,10 +46,10 @@ bool all_of(InputIt first, InputIt last, UnaryPredicate p)
 template<class InputIt, class UnaryPredicate>
 bool any_of(InputIt first, InputIt last, UnaryPredicate p)
 {
-    for(;first<last;first++){
+    for(;first<last;first++){//!!
      if(p(*first))
       return true;
-   }
+   }//!!
     return false;
 }
 
@@ -66,9 +67,9 @@ bool none_of(InputIt first, InputIt last, UnaryPredicate p)
 {
   for(;first<last;first++){
      if(p(*first))
-      return false;
+      return false;//!!
    }
-    return true;
+    return true;//!!
 }
 
 }

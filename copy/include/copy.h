@@ -17,15 +17,17 @@ namespace graal {
  * @param d_first iterator que aponta para o inicio do output range
  * @return InputIt iterator que aponta para o final do output range
  */
-
+/*
+ok
+*/
 template<class InputIt>
 InputIt copy(InputIt first, InputIt last, InputIt d_first)
 {
  for(;first<last;first++,d_first++)
   *d_first=*first;
     
-    return ++d_first;
-}
+    return ++d_first;//!!
+}//!!
 
 }
 #endif

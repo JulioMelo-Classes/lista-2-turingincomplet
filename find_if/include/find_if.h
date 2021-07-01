@@ -18,6 +18,9 @@ namespace graal {
  * @param p função predicado
  * @return InputIt iterator que aponta para o primeiro elemento do range que satisfaz p
  */
+ /*
+ ok
+ */
 template<class InputIt, class UnaryPredicate>
 InputIt find_if(InputIt first, InputIt last, UnaryPredicate p)
 {

@@ -1,3 +1,6 @@
+#ifndef MINMAX_H
+#define MINMAX_H
+
 using std::pair;
 #include <iterator>
 using std::distance;
@@ -18,6 +21,9 @@ namespace graal {
      *
      * @return Um std::pair contendo o menor e maior elemento, nesta ordem
      *
+     */
+     /*
+     uns erros de compilação mas ok
      */
     template <typename Itr, typename Compare >
     std::pair<Itr, Itr> minmax(Itr first, Itr last, Compare cmp)
